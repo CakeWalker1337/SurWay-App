@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/category_logo_size"
+        android:layout_height="@dimen/category_logo_size"
+        android:layout_margin="@dimen/margin_4x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_4x"
+        android:layout_marginEnd="@dimen/margin_4x"
+        android:textColor="@color/categoryTitleColor"
+        android:textSize="@dimen/category_title_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/ivTrend"
+        app:layout_constraintStart_toEndOf="@+id/ivLogo"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Информационные технологии" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_4x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:textColor="@color/categoryDescriptionColor"
+        android:textSize="@dimen/category_description_text_size"
+        app:layout_constraintStart_toEndOf="@+id/ivLogo"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="Всё, что нужно знать об IT" />
+
+    <ImageView
+        android:id="@+id/ivTrend"
+        android:layout_width="@dimen/icon_size_1x"
+        android:layout_height="@dimen/icon_size_1x"
+        android:layout_marginTop="@dimen/margin_4x"
+        android:layout_marginEnd="@dimen/margin_4x"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvTrend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:textSize="@dimen/category_trend_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/ivTrend"
+        app:layout_constraintStart_toStartOf="@+id/ivTrend"
+        app:layout_constraintTop_toBottomOf="@+id/ivTrend"
+        tools:text="+0.13%" />
+
+    <TextView
+        android:id="@+id/tvUpdateDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/categoryUpdateDateColor"
+        android:textSize="@dimen/category_update_date_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTrend"
+        tools:text="обновлено: 15 дн. назад" />
+</androidx.constraintlayout.widget.ConstraintLayout>
