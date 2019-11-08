@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#C6592A</color>
+    <color name="colorPrimaryDark">#A34A24</color>
+    <color name="colorAccent">#F5E0C6</color>
 
-    <color name="categoryTitleColor">#222222</color>
-    <color name="categoryDescriptionColor">#666666</color>
-    <color name="categoryUpdateDateColor">#888888</color>
+    <color name="colorCategoryTitle">#222222</color>
+    <color name="colorCategoryDescription">#666666</color>
+    <color name="colorCategoryUpdateDate">#888888</color>
+
+
+    <color name="colorAuthButtonBackground">@color/colorAccent</color>
+    <color name="colorAuthEditText">#DD965F</color>
+
 </resources>

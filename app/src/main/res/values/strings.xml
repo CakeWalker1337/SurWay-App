@@ -3,12 +3,15 @@
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="title_activity_auth">Sign in</string>
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="prompt_email">Эл. адрес</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="prompt_repeat_password">Повтор пароля</string>
+    <string name="prompt_full_name">Полное имя</string>
+    <string name="action_sign_in">Войти</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="auth_register_link_text"><u>Already have an account?</u></string>
 </resources>
