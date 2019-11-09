@@ -4,16 +4,25 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProviders
 import com.tenxgames.surway.R
+import org.kodein.di.Kodein
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.closestKodein
+import org.kodein.di.generic.instance
 
-class AuthActivity : AppCompatActivity() {
+
+class AuthActivity : AppCompatActivity(), KodeinAware {
+
+    override val kodein: Kodein by closestKodein()
+
+    private val viewModelFactory: ViewModelFactory by instance()
 
     private lateinit var viewModel: AuthViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setContentView(R.layout.activity_auth)
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
-
+        setContentView(R.layout.activity_auth)
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(AuthViewModel::class.java)
+        viewModel.loadUser()
     }
 
 }
