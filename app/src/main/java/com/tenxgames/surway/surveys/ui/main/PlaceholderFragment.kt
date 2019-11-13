@@ -1,4 +1,4 @@
-package com.tenxgames.surway.ui.main
+package com.tenxgames.surway.surveys.ui.main
 
 import android.os.Bundle
 import android.view.LayoutInflater

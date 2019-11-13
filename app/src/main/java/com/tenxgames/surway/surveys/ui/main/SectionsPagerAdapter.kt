@@ -1,4 +1,4 @@
-package com.tenxgames.surway.ui.main
+package com.tenxgames.surway.surveys.ui.main
 
 import android.content.Context
 import androidx.fragment.app.Fragment

@@ -17,10 +17,5 @@ inline fun <reified T : ViewModel> Builder.bindViewModel(overrides: Boolean? = n
     return bind<T>(T::class.java.simpleName, overrides)
 }
 
-inline fun <reified VM : ViewModel, T> T.viewModel(): Lazy<VM> where T : KodeinAware, T : FragmentActivity {
-    val v = ViewModelProviders.of(this, direct.instance())
-    val s = v.get(VM::class.java)
-    return lazy {
-        s
-    }
-}
+inline fun <reified VM : ViewModel, T> T.viewModel(): Lazy<VM> where T : KodeinAware, T : FragmentActivity =
+    lazy { ViewModelProviders.of(this, direct.instance()).get(VM::class.java) }

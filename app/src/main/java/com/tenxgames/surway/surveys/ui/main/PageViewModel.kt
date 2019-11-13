@@ -1,4 +1,4 @@
-package com.tenxgames.surway.ui.main
+package com.tenxgames.surway.surveys.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
