@@ -1,7 +1,7 @@
-package com.tenxgames.surway.auth.data
+package com.tenxgames.surway.modules.auth.data.model
 
 import com.google.gson.annotations.SerializedName
-import com.tenxgames.surway.auth.User
+import com.tenxgames.surway.modules.auth.ui.model.User
 
 
 data class UserEntity(

@@ -1,11 +1,11 @@
-package com.tenxgames.surway.auth
+package com.tenxgames.surway.modules.auth.ui
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.tenxgames.surway.R
-import com.tenxgames.surway.surveys.SurveysActivity
-import com.tenxgames.surway.utils.viewModel
+import com.tenxgames.surway.modules.surveys.SurveysActivity
+import com.tenxgames.surway.utils.activityViewModel
 import kotlinx.android.synthetic.main.activity_auth.*
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -16,13 +16,15 @@ class AuthActivity : AppCompatActivity(), KodeinAware {
 
     override val kodein: Kodein by closestKodein()
 
-    private val viewModel: AuthViewModel by viewModel()
+    private val viewModel: AuthViewModel by activityViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
         btnLogin.setOnClickListener {
-            viewModel.loadUser()
+            viewModel.test()
+            viewModel.loadUser("")
+
         }
     }
 

@@ -1,4 +1,4 @@
-package com.tenxgames.surway.auth
+package com.tenxgames.surway.modules.auth.ui.model
 
 data class User(
     val id: Long,

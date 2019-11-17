@@ -1,5 +1,6 @@
 package com.tenxgames.surway.utils
 
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProviders
@@ -17,5 +18,9 @@ inline fun <reified T : ViewModel> Builder.bindViewModel(overrides: Boolean? = n
     return bind<T>(T::class.java.simpleName, overrides)
 }
 
-inline fun <reified VM : ViewModel, T> T.viewModel(): Lazy<VM> where T : KodeinAware, T : FragmentActivity =
+inline fun <reified VM : ViewModel, T> T.activityViewModel(): Lazy<VM> where T : KodeinAware, T : FragmentActivity =
+    lazy { ViewModelProviders.of(this, direct.instance()).get(VM::class.java) }
+
+
+inline fun <reified VM : ViewModel, T> T.fragmentViewModel(): Lazy<VM> where T : KodeinAware, T : Fragment =
     lazy { ViewModelProviders.of(this, direct.instance()).get(VM::class.java) }

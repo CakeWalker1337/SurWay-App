@@ -1,4 +1,4 @@
-package com.tenxgames.surway.surveys.ui.main
+package com.tenxgames.surway.modules.surveys.ui.mysurveys
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,30 +7,32 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.tenxgames.surway.R
+import com.tenxgames.surway.utils.fragmentViewModel
+import org.kodein.di.Kodein
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.closestKodein
 
 /**
  * A placeholder fragment containing a simple view.
  */
-class PlaceholderFragment : Fragment() {
+class MySurveysFragment : Fragment(), KodeinAware {
 
-    private lateinit var pageViewModel: PageViewModel
+    override val kodein: Kodein by closestKodein()
+
+    private val mMySurveysViewModel: MySurveysViewModel by fragmentViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        pageViewModel = ViewModelProviders.of(this).get(PageViewModel::class.java).apply {
-            setIndex(arguments?.getInt(ARG_SECTION_NUMBER) ?: 1)
-        }
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_main, container, false)
+        val root = inflater.inflate(R.layout.fragment_my_surveys, container, false)
         val textView: TextView = root.findViewById(R.id.section_label)
-        pageViewModel.text.observe(this, Observer<String> {
+        mMySurveysViewModel.text.observe(this, Observer<String> {
             textView.text = it
         })
         return root
@@ -48,8 +50,8 @@ class PlaceholderFragment : Fragment() {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): PlaceholderFragment {
-            return PlaceholderFragment().apply {
+        fun newInstance(sectionNumber: Int): MySurveysFragment {
+            return MySurveysFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }
