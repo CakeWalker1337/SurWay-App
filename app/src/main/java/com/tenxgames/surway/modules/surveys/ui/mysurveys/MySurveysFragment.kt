@@ -22,6 +22,7 @@ class MySurveysFragment : Fragment(), KodeinAware {
 
     private val mMySurveysViewModel: MySurveysViewModel by fragmentViewModel()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }

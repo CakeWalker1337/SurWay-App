@@ -13,8 +13,11 @@ data class UserEntity(
 
     @SerializedName("email")
     val email: String
-) {
-    fun toPresentation() = User(id, fullName, email)
-}
+)
 
-fun User.toEntity() = UserEntity(this.id, this.fullName, this.email)
+fun User.toEntity() =
+    UserEntity(
+        id = this.id,
+        fullName = this.fullName,
+        email = this.email
+    )

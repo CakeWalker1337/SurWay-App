@@ -23,8 +23,8 @@ class AuthActivity : AppCompatActivity(), KodeinAware {
         setContentView(R.layout.activity_auth)
         btnLogin.setOnClickListener {
             viewModel.test()
-            viewModel.loadUser("")
-
+            //viewModel.loadUser("")
+            openSurveysActivity()
         }
     }
 

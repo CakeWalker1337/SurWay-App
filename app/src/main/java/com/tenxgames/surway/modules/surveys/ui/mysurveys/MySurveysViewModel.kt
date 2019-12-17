@@ -5,6 +5,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.tenxgames.surway.modules.surveys.data.SurveysRepository
+import com.tenxgames.surway.modules.surveys.ui.model.Survey
+import com.tenxgames.surway.modules.surveys.ui.model.toPresentation
+import kotlinx.coroutines.runBlocking
 
 class MySurveysViewModel(private val repository: SurveysRepository) : ViewModel() {
 
@@ -13,7 +16,9 @@ class MySurveysViewModel(private val repository: SurveysRepository) : ViewModel(
         "Hello world from section: $it"
     }
 
-    fun setIndex(index: Int) {
-        _index.value = index
+    fun getAllSurveys(): LiveData<Survey> {
+        return runBlocking {
+            Transformations.map(repository.loadSurveys()) { it.toPresentation() }
+        }
     }
 }
