@@ -6,6 +6,7 @@ import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import com.tenxgames.surway.modules.auth.data.AuthRepository
 import com.tenxgames.surway.modules.auth.ui.model.User
+import com.tenxgames.surway.modules.auth.ui.model.toPresentation
 import kotlinx.coroutines.runBlocking
 
 class AuthViewModel(private val repository: AuthRepository) : ViewModel() {

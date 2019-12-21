@@ -16,9 +16,9 @@ class MySurveysViewModel(private val repository: SurveysRepository) : ViewModel(
         "Hello world from section: $it"
     }
 
-    fun getAllSurveys(): LiveData<Survey> {
+    fun getMySurveys(): LiveData<Survey> {
         return runBlocking {
-            Transformations.map(repository.loadSurveys()) { it.toPresentation() }
+            Transformations.map(repository.loadSurveys(1)) { it.toPresentation() }
         }
     }
 }
