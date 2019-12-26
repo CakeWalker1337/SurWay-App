@@ -22,7 +22,7 @@ import org.kodein.di.android.x.closestKodein
 /**
  * A placeholder fragment containing a simple view.
  */
-class MySurveysFragment : BaseFragment(), KodeinAware {
+class AllSurveysFragment : BaseFragment(), KodeinAware {
 
     override val kodein: Kodein by closestKodein()
 

@@ -6,6 +6,6 @@ import com.tenxgames.surway.modules.surveys.data.model.SurveyEntity
 
 class SurveysRepository(private val restApi: RestApi) {
 
-    suspend fun loadSurveys(userId: Long): LiveData<SurveyEntity> = restApi.loadSurveys(userId)
+    suspend fun loadSurveys(userId: Long): LiveData<List<SurveyEntity>> = restApi.loadSurveys(userId)
 
 }

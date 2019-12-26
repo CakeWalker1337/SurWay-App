@@ -9,10 +9,10 @@ import retrofit2.http.Query
 interface RestApi {
 
     @GET
-    fun loadUser(@Query("email") email: String): LiveData<UserEntity>
+    suspend fun loadUser(@Query("email") email: String): LiveData<UserEntity>
 
     @GET
-    fun loadSurveys(@Query("userId") userId: Long): LiveData<SurveyEntity>
+    suspend fun loadSurveys(@Query("userId") userId: Long): LiveData<List<SurveyEntity>>
 
 
 }
