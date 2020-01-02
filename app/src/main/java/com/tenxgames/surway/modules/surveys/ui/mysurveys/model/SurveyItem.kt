@@ -4,6 +4,7 @@ import android.view.View
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.items.AbstractItem
 import com.tenxgames.surway.R
+import com.tenxgames.surway.utils.createCategoryImageView
 import com.tenxgames.surway.utils.declareColor
 import kotlinx.android.synthetic.main.survey_item_view.view.*
 
@@ -21,6 +22,11 @@ class SurveyItem(val survey: Survey) : AbstractItem<SurveyItem.ViewHolder>() {
             view.tvStatus.text = item.survey.status.toString()
             view.tvStatus.setTextColor(item.survey.status.declareColor())
             view.tvCreatedDate.text = item.survey.created
+
+            val categories = view.llCategories
+            item.survey.categories.forEach {
+                categories.addView(createCategoryImageView(categories.context, it.imageUrl))
+            }
         }
 
         override fun unbindView(item: SurveyItem) {

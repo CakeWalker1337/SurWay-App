@@ -4,7 +4,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".modules.surveys.ui.mysurveys.AllSurveysFragment">
+    tools:context=".modules.surveys.ui.mysurveys.CategoriesFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSurveys"

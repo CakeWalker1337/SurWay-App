@@ -43,8 +43,8 @@
 
     <ImageView
         android:id="@+id/ivTrend"
-        android:layout_width="@dimen/icon_size_1x"
-        android:layout_height="@dimen/icon_size_1x"
+        android:layout_width="@dimen/category_icon_size_1x"
+        android:layout_height="@dimen/category_icon_size_1x"
         android:layout_marginTop="@dimen/margin_4x"
         android:layout_marginEnd="@dimen/margin_4x"
         app:layout_constraintEnd_toEndOf="parent"

@@ -1,4 +1,4 @@
-package com.tenxgames.surway.modules.surveys.ui.allsurveys.model
+package com.tenxgames.surway.modules.surveys.ui.categories.model
 
 import com.tenxgames.surway.modules.surveys.data.model.SurveyCategoryEntity
 import com.tenxgames.surway.utils.toCreatedDateString

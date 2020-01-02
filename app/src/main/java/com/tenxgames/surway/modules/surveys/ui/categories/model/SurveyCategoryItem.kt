@@ -1,7 +1,9 @@
-package com.tenxgames.surway.modules.surveys.ui.allsurveys.model
+package com.tenxgames.surway.modules.surveys.ui.categories.model
 
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.view.View
+import com.bumptech.glide.Glide
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.items.AbstractItem
 import com.tenxgames.surway.R
@@ -25,6 +27,10 @@ class SurveyCategoryItem(val surveyCategory: SurveyCategory) : AbstractItem<Surv
             view.tvTrend.text = item.surveyCategory.trend.toTrendString()
             view.ivTrend.setImageDrawable(getTrendDrawable(item.surveyCategory.trend))
             view.tvUpdatedDate.text = item.surveyCategory.updated
+            Glide.with(view)
+                .load(Uri.parse(item.surveyCategory.imageUrl))
+                .placeholder(view.context.getDrawable(R.drawable.ic_placeholder_category))
+                .into(view.ivLogo)
         }
 
         override fun unbindView(item: SurveyCategoryItem) {
@@ -33,6 +39,8 @@ class SurveyCategoryItem(val surveyCategory: SurveyCategory) : AbstractItem<Surv
             view.tvStatus.text = null
             view.tvStatus.setTextColor(null)
             view.tvUpdatedDate.text = null
+            view.ivLogo.setImageDrawable(null)
+            view.ivTrend.setImageDrawable(null)
         }
 
         private fun getTrendDrawable(trend: Double): Drawable? =

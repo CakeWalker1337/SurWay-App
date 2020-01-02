@@ -6,7 +6,8 @@ import com.tenxgames.surway.api.RestApi
 import com.tenxgames.surway.base.ViewModelFactory
 import com.tenxgames.surway.modules.auth.di.AuthModule
 import com.tenxgames.surway.modules.surveys.data.SurveysRepository
-import com.tenxgames.surway.modules.surveys.ui.mysurveys.AllSurveysViewModel
+import com.tenxgames.surway.modules.surveys.ui.mysurveys.CategoriesViewModel
+import com.tenxgames.surway.modules.surveys.ui.mysurveys.MySurveysViewModel
 import com.tenxgames.surway.utils.bindViewModel
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -23,7 +24,8 @@ class SurWayApp : Application(), KodeinAware {
             import(AuthModule().provide())
             bind<SurveysRepository>() with singleton { SurveysRepository(instance()) }
             bind<ViewModelProvider.Factory>() with singleton { ViewModelFactory(kodein.direct) }
-            bindViewModel<AllSurveysViewModel>() with provider { AllSurveysViewModel(instance()) }
+            bindViewModel<CategoriesViewModel>() with provider { CategoriesViewModel(instance()) }
+            bindViewModel<MySurveysViewModel>() with provider { MySurveysViewModel(instance()) }
             bind<RestApi>() with singleton { Retrofit.Builder().baseUrl("https://rofl.com").build().create(RestApi::class.java) }
         }
 

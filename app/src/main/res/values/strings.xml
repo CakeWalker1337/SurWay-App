@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">SurWay</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_all_surveys_title">All surveys</string>
+    <string name="tab_my_surveys_title">My surveys</string>
     <string name="title_activity_auth">Sign in</string>
     <string name="prompt_email">Эл. адрес</string>
     <string name="prompt_password">Пароль</string>

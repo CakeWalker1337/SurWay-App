@@ -26,7 +26,7 @@ class MySurveysFragment : BaseFragment(), KodeinAware {
 
     override val kodein: Kodein by closestKodein()
 
-    private val mViewModel: AllSurveysViewModel by fragmentViewModel()
+    private val mViewModel: MySurveysViewModel by fragmentViewModel()
 
     val itemAdapter = ItemAdapter<SurveyItem>()
     val adapter = FastAdapter.with(itemAdapter)
@@ -64,8 +64,8 @@ class MySurveysFragment : BaseFragment(), KodeinAware {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): AllSurveysFragment {
-            return AllSurveysFragment().apply {
+        fun newInstance(sectionNumber: Int): MySurveysFragment {
+            return MySurveysFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }

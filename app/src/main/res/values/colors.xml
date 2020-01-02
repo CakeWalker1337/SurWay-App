@@ -8,6 +8,9 @@
     <color name="colorCategoryDescription">#666666</color>
     <color name="colorCategoryUpdateDate">#888888</color>
 
+    <color name="colorSurveyTitle">#222222</color>
+    <color name="colorSurveyDescription">#666666</color>
+    <color name="colorSurveyCreatedDate">#888888</color>
 
     <color name="colorAuthButtonBackground">@color/colorAccent</color>
     <color name="colorAuthEditText">#DD965F</color>

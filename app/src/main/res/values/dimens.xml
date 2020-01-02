@@ -5,14 +5,24 @@
     <dimen name="appbar_padding">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
-    <dimen name="category_logo_size">46dp</dimen>
+
     <dimen name="margin_4x">16dp</dimen>
     <dimen name="margin_1x">4dp</dimen>
     <dimen name="margin_2x">8dp</dimen>
     <dimen name="margin_3x">12dp</dimen>
-    <dimen name="category_title_text_size">16sp</dimen>
+
+    <!-- Category-->
+    <dimen name="category_logo_size">46dp</dimen>
+    <dimen name="category_title_text_size">18sp</dimen>
     <dimen name="category_description_text_size">12sp</dimen>
-    <dimen name="icon_size_1x">24dp</dimen>
+    <dimen name="category_icon_size_1x">24dp</dimen>
     <dimen name="category_trend_text_size">10sp</dimen>
     <dimen name="category_update_date_text_size">10sp</dimen>
+
+    <!-- MySurveys-->
+    <dimen name="survey_title_text_size">18sp</dimen>
+    <dimen name="survey_description_text_size">12sp</dimen>
+    <dimen name="survey_category_icon_size">20dp</dimen>
+    <dimen name="survey_status_text_size">12sp</dimen>
+    <dimen name="survey_created_date_text_size">10sp</dimen>
 </resources>
