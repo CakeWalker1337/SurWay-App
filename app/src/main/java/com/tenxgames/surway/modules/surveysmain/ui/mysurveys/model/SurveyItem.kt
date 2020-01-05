@@ -1,4 +1,4 @@
-package com.tenxgames.surway.modules.surveys.ui.mysurveys.model
+package com.tenxgames.surway.modules.surveysmain.ui.mysurveys.model
 
 import android.view.View
 import com.mikepenz.fastadapter.FastAdapter

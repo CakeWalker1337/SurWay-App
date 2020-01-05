@@ -1,4 +1,4 @@
-package com.tenxgames.surway.modules.surveys.data.model
+package com.tenxgames.surway.modules.surveysmain.data.model
 
 import org.joda.time.DateTime
 

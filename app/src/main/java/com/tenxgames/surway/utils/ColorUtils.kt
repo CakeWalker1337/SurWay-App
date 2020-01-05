@@ -1,7 +1,7 @@
 package com.tenxgames.surway.utils
 
 import android.graphics.Color
-import com.tenxgames.surway.modules.surveys.ui.mysurveys.model.Survey
+import com.tenxgames.surway.modules.surveysmain.ui.mysurveys.model.Survey
 
 fun Survey.Status.declareColor(): Int {
     return when (this) {

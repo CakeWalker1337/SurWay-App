@@ -1,4 +1,4 @@
-package com.tenxgames.surway.modules.surveys.ui.categories.model
+package com.tenxgames.surway.modules.surveysmain.ui.categories.model
 
 import android.graphics.drawable.Drawable
 import android.net.Uri

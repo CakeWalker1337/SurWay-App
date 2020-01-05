@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.tenxgames.surway.R
-import com.tenxgames.surway.modules.surveys.SurveysActivity
+import com.tenxgames.surway.modules.surveysmain.SurveysActivity
 import com.tenxgames.surway.utils.activityViewModel
 import kotlinx.android.synthetic.main.activity_auth.*
 import org.kodein.di.Kodein

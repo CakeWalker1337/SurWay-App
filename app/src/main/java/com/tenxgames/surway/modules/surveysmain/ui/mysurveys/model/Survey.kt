@@ -1,8 +1,8 @@
-package com.tenxgames.surway.modules.surveys.ui.mysurveys.model
+package com.tenxgames.surway.modules.surveysmain.ui.mysurveys.model
 
-import com.tenxgames.surway.modules.surveys.data.model.SurveyEntity
-import com.tenxgames.surway.modules.surveys.ui.categories.model.SurveyCategory
-import com.tenxgames.surway.modules.surveys.ui.categories.model.toPresentation
+import com.tenxgames.surway.modules.surveysmain.data.model.SurveyEntity
+import com.tenxgames.surway.modules.surveysmain.ui.categories.model.SurveyCategory
+import com.tenxgames.surway.modules.surveysmain.ui.categories.model.toPresentation
 import com.tenxgames.surway.utils.toCreatedDateString
 
 data class Survey(

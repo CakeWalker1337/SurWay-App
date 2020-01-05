@@ -1,11 +1,11 @@
-package com.tenxgames.surway.modules.surveys.ui.mysurveys
+package com.tenxgames.surway.modules.surveysmain.ui.mysurveys
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.tenxgames.surway.modules.surveys.data.SurveysRepository
-import com.tenxgames.surway.modules.surveys.ui.categories.model.SurveyCategory
-import com.tenxgames.surway.modules.surveys.ui.mysurveys.model.Survey
+import com.tenxgames.surway.modules.surveysmain.data.SurveysRepository
+import com.tenxgames.surway.modules.surveysmain.ui.categories.model.SurveyCategory
+import com.tenxgames.surway.modules.surveysmain.ui.mysurveys.model.Survey
 
 class MySurveysViewModel(private val repository: SurveysRepository) : ViewModel() {
 

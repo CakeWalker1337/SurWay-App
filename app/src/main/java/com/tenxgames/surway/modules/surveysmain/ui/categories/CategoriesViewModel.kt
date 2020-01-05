@@ -1,10 +1,10 @@
-package com.tenxgames.surway.modules.surveys.ui.mysurveys
+package com.tenxgames.surway.modules.surveysmain.ui.mysurveys
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.tenxgames.surway.modules.surveys.data.SurveysRepository
-import com.tenxgames.surway.modules.surveys.ui.categories.model.SurveyCategory
+import com.tenxgames.surway.modules.surveysmain.data.SurveysRepository
+import com.tenxgames.surway.modules.surveysmain.ui.categories.model.SurveyCategory
 
 class CategoriesViewModel(private val repository: SurveysRepository) : ViewModel() {
 
@@ -27,4 +27,5 @@ class CategoriesViewModel(private val repository: SurveysRepository) : ViewModel
 //            Transformations.map(repository.loadSurveys(1)) { list -> list.map { it.toPresentation() } }
 //        }
     }
+
 }

@@ -1,6 +1,6 @@
-package com.tenxgames.surway.modules.surveys.data.model
+package com.tenxgames.surway.modules.surveysmain.data.model
 
-import com.tenxgames.surway.modules.surveys.ui.mysurveys.model.Survey
+import com.tenxgames.surway.modules.surveysmain.ui.mysurveys.model.Survey
 import org.joda.time.DateTime
 
 data class SurveyEntity(

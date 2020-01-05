@@ -1,4 +1,4 @@
-package com.tenxgames.surway.modules.surveys.ui.mysurveys
+package com.tenxgames.surway.modules.surveysmain.ui.mysurveys
 
 import android.os.Bundle
 import android.view.View
@@ -10,10 +10,10 @@ import com.mikepenz.fastadapter.IAdapter
 import com.mikepenz.fastadapter.adapters.ItemAdapter
 import com.tenxgames.surway.R
 import com.tenxgames.surway.base.BaseFragment
-import com.tenxgames.surway.modules.surveys.ui.categories.model.SurveyCategory
-import com.tenxgames.surway.modules.surveys.ui.categories.model.SurveyCategoryItem
+import com.tenxgames.surway.modules.surveysmain.ui.mysurveys.model.Survey
+import com.tenxgames.surway.modules.surveysmain.ui.mysurveys.model.SurveyItem
 import com.tenxgames.surway.utils.fragmentViewModel
-import kotlinx.android.synthetic.main.fragment_all_surveys.view.*
+import kotlinx.android.synthetic.main.fragment_my_surveys.view.*
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.closestKodein
@@ -22,32 +22,33 @@ import org.kodein.di.android.x.closestKodein
 /**
  * A placeholder fragment containing a simple view.
  */
-class CategoriesFragment : BaseFragment(), KodeinAware {
+class MySurveysFragment : BaseFragment(), KodeinAware {
 
     override val kodein: Kodein by closestKodein()
 
-    private val mViewModel: CategoriesViewModel by fragmentViewModel()
+    private val mViewModel: MySurveysViewModel by fragmentViewModel()
 
-    val itemAdapter = ItemAdapter<SurveyCategoryItem>()
+    val itemAdapter = ItemAdapter<SurveyItem>()
     val adapter = FastAdapter.with(itemAdapter)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
 
-    override fun getLayoutRes(): Int = R.layout.fragment_all_surveys
+    override fun getLayoutRes(): Int = R.layout.fragment_my_surveys
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val rvSurveys = view.rvSurveys
+        val rvSurveys = view.rvMySurveys
         rvSurveys.adapter = adapter
         rvSurveys.layoutManager = LinearLayoutManager(context)
         rvSurveys.addItemDecoration(DividerItemDecoration(rvSurveys.context, DividerItemDecoration.VERTICAL))
-        adapter.onClickListener = { view1: View?, iAdapter: IAdapter<SurveyCategoryItem>, surveyItem: SurveyCategoryItem, i: Int ->
+        adapter.onClickListener = { view1: View?, iAdapter: IAdapter<SurveyItem>, surveyItem: SurveyItem, i: Int ->
             true
         }
-        mViewModel.getMySurveys().observe(this, Observer<List<SurveyCategory>> { list ->
-            itemAdapter.add(list.map { SurveyCategoryItem(it) })
+        mViewModel.getMySurveys().observe(this, Observer<List<Survey>> { list ->
+            itemAdapter.clear()
+            itemAdapter.add(list.map { SurveyItem(it) })
             adapter.notifyAdapterDataSetChanged()
         })
     }
@@ -64,8 +65,8 @@ class CategoriesFragment : BaseFragment(), KodeinAware {
          * number.
          */
         @JvmStatic
-        fun newInstance(sectionNumber: Int): CategoriesFragment {
-            return CategoriesFragment().apply {
+        fun newInstance(sectionNumber: Int): MySurveysFragment {
+            return MySurveysFragment().apply {
                 arguments = Bundle().apply {
                     putInt(ARG_SECTION_NUMBER, sectionNumber)
                 }

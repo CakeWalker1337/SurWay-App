@@ -1,12 +1,12 @@
-package com.tenxgames.surway.modules.surveys.ui
+package com.tenxgames.surway.modules.surveysmain.ui
 
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.tenxgames.surway.R
-import com.tenxgames.surway.modules.surveys.ui.mysurveys.CategoriesFragment
-import com.tenxgames.surway.modules.surveys.ui.mysurveys.MySurveysFragment
+import com.tenxgames.surway.modules.surveysmain.ui.mysurveys.CategoriesFragment
+import com.tenxgames.surway.modules.surveysmain.ui.mysurveys.MySurveysFragment
 
 private val TAB_TITLES = arrayOf(
     R.string.tab_all_surveys_title,
